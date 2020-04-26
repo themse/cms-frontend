@@ -1,26 +1,16 @@
 import React from "react";
-
+import { Switch, Route } from "react-router-dom";
+import { CategoryRouter } from "../router/category";
+import { Home } from "../pages/Home";
 import { Layout } from "./layout";
-import { VendorList } from "./vendor/list";
-import { ProductList } from "./product/list";
-import { Navigation } from "./navigation";
-import { SlideShow } from "./slideshow";
 
 export const App = () => {
   return (
     <Layout>
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-3 hidden-xs">
-            <Navigation />
-          </div>
-          <div id="content" className="col-sm-9">
-            <SlideShow />
-            <ProductList />
-            <VendorList />
-          </div>
-        </div>
-      </div>
+      <Switch>
+        {/* <Route path="/:categorySlug" component={CategoryRouter} exact /> */}
+        <Route path="/" component={Home} />
+      </Switch>
     </Layout>
   );
 };
