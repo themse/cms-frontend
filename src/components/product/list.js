@@ -1,0 +1,28 @@
+import React, { Fragment } from "react";
+import { ProductItem } from "./item";
+
+import { product as productImg } from "../../common/images";
+
+export const ProductList = () => {
+  return (
+    <Fragment>
+      <h3 className="rc-heading margin-top-forty margin-bottom-thirty">
+        Featured
+      </h3>
+      <div className="row">
+        {Array(8)
+          .fill(1)
+          .map((product, idx) => (
+            <ProductItem
+              key={idx}
+              name="MacBook Pro 13"
+              slug="#"
+              image={productImg}
+              price="$602.00"
+              tax="$500.00"
+            />
+          ))}
+      </div>
+    </Fragment>
+  );
+};
