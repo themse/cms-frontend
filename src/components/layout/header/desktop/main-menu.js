@@ -8,7 +8,7 @@ export const MainMenu = () => {
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <div id="logo">
-            <a href="index.php@route=common%252Fhome.html">
+            <a href="/">
               <img
                 src={logo}
                 title="Your Store"

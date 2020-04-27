@@ -91,7 +91,6 @@ export const CategoryRouter = ({ match, ...props }) => {
         <Route
           path={`${match.path}/:categorySlug`}
           component={CategoryRouter}
-          exact
         />
       </Switch>
     </Fragment>

@@ -1,7 +1,10 @@
 import React, { Fragment } from "react";
+import { useFetching } from "../../hooks/useFetching";
 
-export const CategoryNav = ({ categories }) => {
+export const CategoryNav = ({ categories, setCategoryListRequest }) => {
   const title = "Shop for";
+
+  useFetching(setCategoryListRequest);
 
   return (
     <Fragment>

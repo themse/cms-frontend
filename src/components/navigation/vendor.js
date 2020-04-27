@@ -1,7 +1,11 @@
 import React, { Fragment } from "react";
 
-export const VendorNav = ({ vendors }) => {
+import { useFetching } from "../../hooks/useFetching";
+
+export const VendorNav = ({ vendors, setVendorListRequest }) => {
   const title = "Brands";
+
+  useFetching(setVendorListRequest);
 
   return (
     <Fragment>
