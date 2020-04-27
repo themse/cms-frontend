@@ -5,10 +5,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "server:fake": "json-server --watch fake-server/store.json --port 3009"
+    "server:fake": "json-server --watch fake-server/store.json --port 3009",
+    "eject": "react-scripts eject",
+    "clean": "prettier --write '**/*.{js,css,md}'"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.7",
+    "normalizr": "^3.6.0",
     "pure-react-carousel": "^1.27.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -17,7 +22,22 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "yup": "^0.28.4"
+  },
+  "devDependencies": {
+    "json-server": "^0.16.1",
+    "prettier": "^2.0.5"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "browserslist": {
     "production": [
@@ -30,8 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "json-server": "^0.16.1"
   }
 }

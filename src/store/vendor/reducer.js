@@ -1,19 +1,19 @@
-import { SET_VENDOR_LIST } from "./const";
+import { SET_VENDOR_LIST } from './const';
 
 const initialState = {
-  list: [],
+    list: [],
 };
 
 export const vendorReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case SET_VENDOR_LIST: {
-      return {
-        ...state,
-        list: action.payload,
-      };
+    switch (action.type) {
+        case SET_VENDOR_LIST: {
+            return {
+                ...state,
+                list: action.payload,
+            };
+        }
+        default: {
+            return state;
+        }
     }
-    default: {
-      return state;
-    }
-  }
 };

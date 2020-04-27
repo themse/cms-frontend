@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 
 export const ProductCard = () => {
-  return <p>ProductCard</p>;
+    return <p>ProductCard</p>;
 };

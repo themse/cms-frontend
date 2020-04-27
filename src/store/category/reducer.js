@@ -1,17 +1,17 @@
-import { SET_CATEGORY_LIST } from "./const";
+import { SET_CATEGORY_LIST } from './const';
 
 const initialState = {
-  list: [],
+    list: [],
 };
 
 export const categoryReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case SET_CATEGORY_LIST: {
-      return { ...state, list: action.payload };
-    }
+    switch (action.type) {
+        case SET_CATEGORY_LIST: {
+            return { ...state, list: action.payload };
+        }
 
-    default: {
-      return state;
+        default: {
+            return state;
+        }
     }
-  }
 };
