@@ -1,5 +1,8 @@
-export const getAppTest = () => {
+import { Action } from '../types';
+import { AppType } from './types';
+
+export const getAppTest = (): Action<AppType> => {
     return {
-        type: 'TEST',
+        type: AppType.SET_SESSION,
     };
 };

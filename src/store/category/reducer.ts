@@ -1,21 +1,30 @@
 import { Reducer } from 'redux';
+import { ReducerStrategyType, HandlerType } from '../types';
 import { CategoryType, CategoryState, CategoryActionTypes } from './types';
 
 const initialState: CategoryState = {
     list: [],
 };
 
+const reducerStrategy: ReducerStrategyType<CategoryState, CategoryActionTypes, CategoryType> = {
+    [CategoryType.SET_LIST]: setListHandler,
+    __default__: defaultHandler,
+};
+
 export const categoryReducer: Reducer<CategoryState, CategoryActionTypes> = (
     state = initialState,
     action
 ): CategoryState => {
-    switch (action.type) {
-        case CategoryType.SET_LIST: {
-            return { ...state, list: action.payload };
-        }
+    const handler: HandlerType<CategoryState, CategoryActionTypes> =
+        reducerStrategy[action.type] ?? reducerStrategy.__default__;
 
-        default: {
-            return state;
-        }
-    }
+    return handler(state, action);
 };
+
+function defaultHandler(state: CategoryState): CategoryState {
+    return state;
+}
+
+function setListHandler(state: CategoryState, action: CategoryActionTypes): CategoryState {
+    return { ...state, list: action.payload };
+}
