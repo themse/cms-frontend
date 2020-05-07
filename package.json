@@ -8,8 +8,9 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "server:fake": "json-server --watch fake-server/store.json --port 3009",
         "eject": "react-scripts eject",
+        "dev": "yarn run server:fake & react-scripts start",
+        "server:fake": "json-server --watch fake-server/store.json --port 3009",
         "clean": "prettier --write '**/*.{js,css,md}'"
     },
     "dependencies": {
