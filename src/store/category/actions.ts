@@ -1,9 +1,13 @@
 import { Action } from '../types';
 import { CategoryType } from './types';
 
-export const setCategoryList = (categories: Array<any>) => {
+export const fetchCategoryList = () => ({
+    type: CategoryType.FETCH_LIST,
+});
+
+export const updateCategoryList = (categories: Array<any>) => {
     return {
-        type: CategoryType.SET_LIST,
+        type: CategoryType.UPDATE_LIST,
         payload: categories,
     };
 };

@@ -2,14 +2,14 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { CategoryNav } from '../../components/navigation/category';
-import { setCategoryListRequest } from '../../store/category/thunks';
+import { fetchCategoryList } from '../../store/category/actions';
 
 const mapStateToProps = ({ category: { list } }) => ({ categories: list });
 
 const mapDispatchToProps = (dispatch) =>
     bindActionCreators(
         {
-            setCategoryListRequest,
+            fetchCategoryList,
         },
         dispatch
     );

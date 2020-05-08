@@ -1,17 +1,17 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-import { useFetching } from '../../hooks/useFetching';
 
 type VendorNavProps = {
     vendors: Array<any>;
-    setVendorListRequest: (args?: any) => Promise<any>;
+    fetchVendorList: () => any;
 };
 
-export const VendorNav: React.FC<VendorNavProps> = ({ vendors, setVendorListRequest }) => {
+export const VendorNav: React.FC<VendorNavProps> = ({ vendors, fetchVendorList }) => {
     const title = 'Brands';
 
-    useFetching(setVendorListRequest);
+    useEffect(() => {
+        fetchVendorList();
+    }, []);
 
     return (
         <Fragment>

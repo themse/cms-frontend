@@ -1,8 +1,12 @@
 import { VendorType } from './types';
 
-export const setVendorList = (vendors: Array<any>) => {
+export const fetchVendorList = () => ({
+    type: VendorType.FETCH_LIST,
+});
+
+export const updateVendorList = (vendors: Array<any>) => {
     return {
-        type: VendorType.SET_LIST,
+        type: VendorType.UPDATE_LIST,
         payload: vendors,
     };
 };

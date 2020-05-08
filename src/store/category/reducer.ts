@@ -7,7 +7,8 @@ const initialState: CategoryState = {
 };
 
 const reducerStrategy: ReducerStrategyType<CategoryState, CategoryActionTypes, CategoryType> = {
-    [CategoryType.SET_LIST]: setListHandler,
+    [CategoryType.FETCH_LIST]: defaultHandler,
+    [CategoryType.UPDATE_LIST]: updateListHandler,
     __default__: defaultHandler,
 };
 
@@ -25,6 +26,7 @@ function defaultHandler(state: CategoryState): CategoryState {
     return state;
 }
 
-function setListHandler(state: CategoryState, action: CategoryActionTypes): CategoryState {
+function updateListHandler(state: CategoryState, action: CategoryActionTypes): CategoryState {
+    // @ts-ignore
     return { ...state, list: action.payload };
 }
