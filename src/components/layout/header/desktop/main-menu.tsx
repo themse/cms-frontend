@@ -39,88 +39,88 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
                         <div className="collapse navbar-collapse navbar-ex1-collapse">
                             <ul className="nav navbar-nav">
                                 <li className="dropdown">
-                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                                    <Link to="/" className="dropdown-toggle" data-toggle="dropdown">
                                         Desktops
-                                    </a>
+                                    </Link>
                                     <div className="dropdown-menu">
                                         <div className="dropdown-inner">
                                             <ul className="list-unstyled">
                                                 <li>
-                                                    <a href="#">PC</a>
+                                                    <Link to="/">PC</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Mac</a>
+                                                    <Link to="/">Mac</Link>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <a href="#" className="see-all">
+                                        <Link to="/" className="see-all">
                                             Show All Desktops
-                                        </a>
+                                        </Link>
                                     </div>
                                 </li>
                                 <li className="dropdown">
-                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                                    <Link to="/" className="dropdown-toggle" data-toggle="dropdown">
                                         Laptops &amp; Notebooks
-                                    </a>
+                                    </Link>
                                     <div className="dropdown-menu">
                                         <div className="dropdown-inner">
                                             <ul className="list-unstyled">
                                                 <li>
-                                                    <a href="#">Macs</a>
+                                                    <Link to="/">Macs</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Windows</a>
+                                                    <Link to="/">Windows</Link>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <a href="#" className="see-all">
+                                        <Link to="/" className="see-all">
                                             Show All Laptops &amp; Notebooks
-                                        </a>
+                                        </Link>
                                     </div>
                                 </li>
                                 <li className="dropdown">
-                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                                    <Link to="/" className="dropdown-toggle" data-toggle="dropdown">
                                         Components
-                                    </a>
+                                    </Link>
                                     <div className="dropdown-menu">
                                         <div className="dropdown-inner">
                                             <ul className="list-unstyled">
                                                 <li>
-                                                    <a href="#">Keyboards</a>
+                                                    <Link to="/">Keyboards</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Mice and Trackballs</a>
+                                                    <Link to="/">Mice and Trackballs</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Monitors</a>
+                                                    <Link to="/">Monitors</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Printers</a>
+                                                    <Link to="/">Printers</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Scanners</a>
+                                                    <Link to="/">Scanners</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Web Cameras</a>
+                                                    <Link to="/">Web Cameras</Link>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <a href="#" className="see-all">
+                                        <Link to="/" className="see-all">
                                             Show All Components
-                                        </a>
+                                        </Link>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#">Tablets</a>
+                                    <Link to="/">Tablets</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Phones &amp; PDAs</a>
+                                    <Link to="/">Phones &amp; PDAs</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Cameras</a>
+                                    <Link to="/">Cameras</Link>
                                 </li>
                                 <li>
-                                    <a href="#">MP3 Players</a>
+                                    <Link to="/">MP3 Players</Link>
                                 </li>
                             </ul>
                         </div>

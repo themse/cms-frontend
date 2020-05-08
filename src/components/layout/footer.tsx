@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 type FooterProps = {};
 
@@ -11,24 +12,16 @@ export const Footer: React.FC<FooterProps> = () => {
                         <h5>Information</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <a href="index.php@route=information%252Finformation&amp;information_id=4.html">
-                                    About Us
-                                </a>
+                                <Link to="/about">About Us</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=information%252Finformation&amp;information_id=6.html">
-                                    Delivery Information
-                                </a>
+                                <Link to="/delivery-information">Delivery Information</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=information%252Finformation&amp;information_id=3.html">
-                                    Privacy Policy
-                                </a>
+                                <Link to="/privacy-policy">Privacy Policy</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=information%252Finformation&amp;information_id=5.html">
-                                    Terms &amp; Conditions
-                                </a>
+                                <Link to="/term-conditions">Terms &amp; Conditions</Link>
                             </li>
                         </ul>
                     </div>
@@ -36,17 +29,13 @@ export const Footer: React.FC<FooterProps> = () => {
                         <h5>Customer Service</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <a href="index.php@route=information%252Fcontact.html">
-                                    Contact Us
-                                </a>
+                                <Link to="/contact-us">Contact Us</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=account%252Freturn%252Fadd.html">
-                                    Returns
-                                </a>
+                                <Link to="/returns">Returns</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=information%252Fsitemap.html">Site Map</a>
+                                <Link to="/site-map">Site Map</Link>
                             </li>
                         </ul>
                     </div>
@@ -54,18 +43,16 @@ export const Footer: React.FC<FooterProps> = () => {
                         <h5>Extras</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <a href="index.php@route=product%252Fmanufacturer.html">Brands</a>
+                                <Link to="/brands">Brands</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=account%252Fvoucher.html">
-                                    Gift Certificates
-                                </a>
+                                <Link to="/certificates">Gift Certificates</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=affiliate%252Faccount.html">Affiliates</a>
+                                <Link to="/affiliates">Affiliates</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=product%252Fspecial.html">Specials</a>
+                                <Link to="/specials">Specials</Link>
                             </li>
                         </ul>
                     </div>
@@ -73,23 +60,23 @@ export const Footer: React.FC<FooterProps> = () => {
                         <h5>My Account</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <a href="index.php@route=account%252Faccount.html">My Account</a>
+                                <Link to="/profile">My Account</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=account%252Forder.html">Order History</a>
+                                <Link to="/order-history">Order History</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=account%252Fwishlist.html">Wish List</a>
+                                <Link to="/wishlist">Wish List</Link>
                             </li>
                             <li>
-                                <a href="index.php@route=account%252Fnewsletter.html">Newsletter</a>
+                                <Link to="/newsletter">Newsletter</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <hr />
                 <p className="copyrights">
-                    Powered By <a href="http://www.opencart.com">OpenCart</a>
+                    Powered By <b>Themse</b>
                     <br /> Your Store &copy; 2020
                 </p>
             </div>

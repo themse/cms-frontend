@@ -1,4 +1,5 @@
 import React from 'react';
+import { FunctionalPage } from '../common/types';
 import { VendorList } from '../components/vendor/list';
 import { ProductList } from '../components/product/list';
 import { Navigation } from '../components/navigation';
@@ -6,7 +7,7 @@ import { SlideShow } from '../components/slideshow';
 
 type HomeProps = {};
 
-export const Home: React.FC<HomeProps> = () => {
+export const HomePage: FunctionalPage<HomeProps> = () => {
     return (
         <div className="container">
             <div className="row">

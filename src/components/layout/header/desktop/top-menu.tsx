@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 type TopMenuProps = {};
 
@@ -8,8 +9,8 @@ export const TopMenu: React.FC<TopMenuProps> = () => {
             <div className="container">
                 <div className="row">
                     <div className="hidden-xs col-sm-5 col-md-4 col-lg-4 login-register-links">
-                        <a href="/">Login</a> or
-                        <a href="/">Register</a>, it only takes a few seconds
+                        <Link to="/">Login</Link> or
+                        <Link to="/">Register</Link>, it only takes a few seconds
                     </div>
                     <div className="col-xs-5 col-sm-3 col-md-5 col-lg-6">
                         <ul className="list-unstyled currency-language">
@@ -63,14 +64,14 @@ export const TopMenu: React.FC<TopMenuProps> = () => {
                     <div className="col-xs-7 col-sm-4 col-md-3 col-lg-2">
                         <div className="search-cart">
                             <div className="search">
-                                <a href="/" className="toggleSearch">
+                                <Link to="/" className="toggleSearch">
                                     <i className="fa fa-search" />
-                                </a>
+                                </Link>
                             </div>
                             <div className="cart">
-                                <a href="/" className="toggleCart">
+                                <Link to="/" className="toggleCart">
                                     Cart<span>0</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

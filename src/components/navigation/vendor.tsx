@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 import { useFetching } from '../../hooks/useFetching';
 
@@ -19,9 +20,9 @@ export const VendorNav: React.FC<VendorNavProps> = ({ vendors, setVendorListRequ
                 {vendors.map((vendor) => {
                     return (
                         <li key={vendor.uid}>
-                            <a href={vendor.slug} className="list-group-item">
+                            <Link to={`/brands/${vendor.slug}`} className="list-group-item">
                                 {vendor.name}
-                            </a>
+                            </Link>
                         </li>
                     );
                 })}
