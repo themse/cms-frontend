@@ -2,7 +2,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { VendorNav } from '../../components/navigation/vendor';
-import { setVendorListRequest } from '../../store/vendor/thunks';
+import { fetchVendorList } from '../../store/vendor/actions';
 
 const mapStateToProps = ({ vendor: { list } }) => ({
     vendors: list,
@@ -11,7 +11,7 @@ const mapStateToProps = ({ vendor: { list } }) => ({
 const mapDispatchToProps = (dispatch) =>
     bindActionCreators(
         {
-            setVendorListRequest,
+            fetchVendorList,
         },
         dispatch
     );

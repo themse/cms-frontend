@@ -6,7 +6,8 @@ export interface CategoryState {
 }
 
 export enum CategoryType {
-    SET_LIST = '@@category/SET_LIST',
+    FETCH_LIST = '@@category/FETCH_LIST',
+    UPDATE_LIST = '@@category/UPDATE_LIST',
 }
 
 export type CategoryActionTypes = ReturnType<InferValueTypes<typeof actions>>;

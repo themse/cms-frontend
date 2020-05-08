@@ -1,15 +1,16 @@
-import React, { Fragment } from 'react';
-import { useFetching } from '../../hooks/useFetching';
+import React, { Fragment, useEffect } from 'react';
 
 type CategoryNavProps = {
     categories: Array<any>;
-    setCategoryListRequest: (args?: any) => Promise<any>;
+    fetchCategoryList: () => any;
 };
 
-export const CategoryNav: React.FC<CategoryNavProps> = ({ categories, setCategoryListRequest }) => {
+export const CategoryNav: React.FC<CategoryNavProps> = ({ categories, fetchCategoryList }) => {
     const title = 'Shop for';
 
-    useFetching(setCategoryListRequest);
+    useEffect(() => {
+        fetchCategoryList();
+    }, []);
 
     return (
         <Fragment>
