@@ -22,7 +22,9 @@ export const ProductItem: React.FC<ProductItemProps> = ({ name, slug, image, pri
                         <a href={slug}>{name}</a>
                     </h4>
                     <p className="price">
-                        {price} <span className="price-tax">Ex Tax: {tax}</span>
+                        <span className="price-new">{price}</span>
+                        <span className="price-old">$122.00</span>
+                        <span className="price-tax">Ex Tax: {tax}</span>
                     </p>
                 </div>
             </div>

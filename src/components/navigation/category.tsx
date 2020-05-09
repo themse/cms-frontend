@@ -1,16 +1,11 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 
 type CategoryNavProps = {
     categories: Array<any>;
-    fetchCategoryList: () => any;
 };
 
-export const CategoryNav: React.FC<CategoryNavProps> = ({ categories, fetchCategoryList }) => {
+export const CategoryNav: React.FC<CategoryNavProps> = ({ categories }) => {
     const title = 'Shop for';
-
-    useEffect(() => {
-        fetchCategoryList();
-    }, []);
 
     return (
         <Fragment>

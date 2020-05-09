@@ -16,6 +16,7 @@ export const HomePage: FunctionalPage<HomeProps> = () => {
                 </div>
                 <div id="content" className="col-sm-9">
                     <SlideShow />
+                    <h3 className="rc-heading margin-top-forty margin-bottom-thirty">Featured</h3>
                     <ProductList />
                     <VendorList />
                 </div>
