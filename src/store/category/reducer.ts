@@ -1,6 +1,8 @@
 import { Reducer } from 'redux';
+import { normalize } from 'normalizr';
 import { ReducerStrategyType, HandlerType } from '../types';
 import { CategoryType, CategoryState, CategoryActionTypes } from './types';
+import { categorySchema } from './schema';
 
 const initialState: CategoryState = {
     list: [],
@@ -27,6 +29,9 @@ function defaultHandler(state: CategoryState): CategoryState {
 }
 
 function updateListHandler(state: CategoryState, action: CategoryActionTypes): CategoryState {
+    // @ts-ignore
+    console.log(normalize(action.payload, [categorySchema]));
+
     // @ts-ignore
     return { ...state, list: action.payload };
 }

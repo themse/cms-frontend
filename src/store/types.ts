@@ -1,10 +1,12 @@
 import { Action as ReduxAction } from 'redux';
 import { AppState } from './app/types';
+import { VendorState } from './vendor/types';
+import { CategoryState } from './category/types';
 
 export interface RootState {
     app: AppState;
-    vendor: any;
-    category: any;
+    vendor: VendorState;
+    category: CategoryState;
 }
 
 export interface Action<T extends string, P = undefined> extends ReduxAction {

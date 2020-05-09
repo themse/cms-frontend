@@ -1,17 +1,12 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 type VendorNavProps = {
     vendors: Array<any>;
-    fetchVendorList: () => any;
 };
 
-export const VendorNav: React.FC<VendorNavProps> = ({ vendors, fetchVendorList }) => {
+export const VendorNav: React.FC<VendorNavProps> = ({ vendors }) => {
     const title = 'Brands';
-
-    useEffect(() => {
-        fetchVendorList();
-    }, []);
 
     return (
         <Fragment>

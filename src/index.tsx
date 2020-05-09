@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import { configureStore } from './store/config';
-import { App } from './components/app';
+import App from './components/app';
 import { RootState } from './store/types';
 
 const store: Store<RootState> = configureStore();
