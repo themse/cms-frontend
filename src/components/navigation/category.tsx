@@ -1,8 +1,5 @@
 import React, { Fragment } from 'react';
-
-type CategoryNavProps = {
-    categories: Array<any>;
-};
+import { CategoryNavProps } from '../../containers/navigation/category-container';
 
 export const CategoryNav: React.FC<CategoryNavProps> = ({ categories }) => {
     const title = 'Shop for';
