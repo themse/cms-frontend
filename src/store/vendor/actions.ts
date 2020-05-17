@@ -1,12 +1,19 @@
 import { VendorType } from './types';
 
-export const fetchVendorList = () => ({
-    type: VendorType.FETCH_LIST,
+export const vendorListRequest = () => ({
+    type: VendorType.LIST_REQUEST,
 });
 
-export const updateVendorList = (vendors: Array<any>) => {
+export const vendorListSuccess = (vendors: Array<any>) => {
     return {
-        type: VendorType.UPDATE_LIST,
+        type: VendorType.LIST_SUCCESS,
         payload: vendors,
+    };
+};
+
+export const vendorListFailed = (error: any) => {
+    return {
+        type: VendorType.LIST_FAILED,
+        payload: error,
     };
 };

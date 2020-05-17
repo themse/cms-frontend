@@ -8,19 +8,19 @@ import { HomePage } from '../pages/home';
 import { ErrorPage } from '../pages/error';
 import CategoryPage from '../pages/category';
 import { BrandPage } from '../pages/brand';
-import { fetchCategoryList } from '../store/category/actions';
-import { fetchVendorList } from '../store/vendor/actions';
+import { categoryListRequest } from '../store/category/actions';
+import { vendorListRequest } from '../store/vendor/actions';
 
 type AppProps = {
-    fetchCategoryList: typeof fetchCategoryList;
-    fetchVendorList: typeof fetchVendorList;
+    categoryListRequest: typeof categoryListRequest;
+    vendorListRequest: typeof vendorListRequest;
 };
 
 // TODO remove state from App, need another resolution
-const App: React.FC<AppProps> = ({ fetchCategoryList, fetchVendorList }) => {
+const App: React.FC<AppProps> = ({ categoryListRequest, vendorListRequest }) => {
     useEffect(() => {
-        fetchCategoryList();
-        fetchVendorList();
+        categoryListRequest();
+        vendorListRequest();
     }, []);
 
     return (
@@ -38,8 +38,8 @@ const App: React.FC<AppProps> = ({ fetchCategoryList, fetchVendorList }) => {
 const mapDispatchToProps = (dispatch: Dispatch) =>
     bindActionCreators(
         {
-            fetchCategoryList,
-            fetchVendorList,
+            categoryListRequest,
+            vendorListRequest,
         },
         dispatch
     );

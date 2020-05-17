@@ -6,8 +6,9 @@ export interface VendorState {
 }
 
 export enum VendorType {
-    FETCH_LIST = '@@vendor/FETCH_LIST',
-    UPDATE_LIST = '@@vendor/UPDATE_LIST',
+    LIST_REQUEST = '@@vendor/LIST_REQUEST',
+    LIST_SUCCESS = '@@vendor/LIST_SUCCESS',
+    LIST_FAILED = '@@vendor/LIST_FAILED',
 }
 
 export type VendorActionTypes = ReturnType<InferValueTypes<typeof actions>>;

@@ -1,8 +1,8 @@
 import { all } from 'redux-saga/effects';
 
-import { fetchVendorListFromApi } from './vendor/saga';
-import { fetchCategoryListFromApi } from './category/saga';
+import { watchFetchData as vendorSaga } from './vendor/saga';
+import { watchFetchData as categorySaga } from './category/saga';
 
 export function* rootSaga() {
-    yield all([fetchVendorListFromApi(), fetchCategoryListFromApi()]);
+    yield all([vendorSaga(), categorySaga()]);
 }
