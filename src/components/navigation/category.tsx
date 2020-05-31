@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { CategoryNavProps } from '../../containers/navigation/category-container';
+import { NavLink } from 'react-router-dom';
 
 export const CategoryNav: React.FC<CategoryNavProps> = ({ categories }) => {
     const title = 'Shop for';

@@ -11,7 +11,7 @@ const initialState: CategoryState = {
 const reducerStrategy: ReducerStrategyType<CategoryState, CategoryActionTypes, CategoryType> = {
     [CategoryType.LIST_REQUEST]: defaultHandler,
     [CategoryType.LIST_SUCCESS]: ListSuccessHandler,
-    [CategoryType.LIST_FAILED]: defaultHandler, // TODO
+    [CategoryType.LIST_FAILED]: defaultHandler,
     __default__: defaultHandler,
 };
 
@@ -30,9 +30,10 @@ function defaultHandler(state: CategoryState): CategoryState {
 }
 
 function ListSuccessHandler(state: CategoryState, action: CategoryActionTypes): CategoryState {
-    // @ts-ignore
-    console.log(normalize(action.payload, [categorySchema]));
+    if ('payload' in action) {
+        console.log(normalize(action.payload, [categorySchema]));
 
-    // @ts-ignore
-    return { ...state, list: action.payload };
+        return { ...state, list: action.payload };
+    }
+    return state;
 }

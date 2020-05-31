@@ -28,10 +28,11 @@ function defaultHandler(state: VendorState): VendorState {
 }
 
 function listSuccessHandler(state: VendorState, action: VendorActionTypes): VendorState {
-    return {
-        ...state,
-        // TODO
-        // @ts-ignore
-        list: action.payload,
-    };
+    if ('payload' in action) {
+        return {
+            ...state,
+            list: action.payload,
+        };
+    }
+    return state;
 }
