@@ -1,9 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-
-type VendorNavProps = {
-    vendors: Array<any>;
-};
+import { VendorNavProps } from '../../containers/navigation/vendor-container';
 
 export const VendorNav: React.FC<VendorNavProps> = ({ vendors }) => {
     const title = 'Brands';

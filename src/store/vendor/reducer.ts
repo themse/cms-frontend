@@ -7,8 +7,9 @@ const initialState: VendorState = {
 };
 
 const reducerStrategy: ReducerStrategyType<VendorState, VendorActionTypes, VendorType> = {
-    [VendorType.FETCH_LIST]: defaultHandler,
-    [VendorType.UPDATE_LIST]: updateListHandler,
+    [VendorType.LIST_REQUEST]: defaultHandler,
+    [VendorType.LIST_SUCCESS]: listSuccessHandler,
+    [VendorType.LIST_FAILED]: defaultHandler,
     __default__: defaultHandler,
 };
 
@@ -26,11 +27,12 @@ function defaultHandler(state: VendorState): VendorState {
     return state;
 }
 
-function updateListHandler(state: VendorState, action: VendorActionTypes): VendorState {
-    return {
-        ...state,
-        // TODO
-        // @ts-ignore
-        list: action.payload,
-    };
+function listSuccessHandler(state: VendorState, action: VendorActionTypes): VendorState {
+    if ('payload' in action) {
+        return {
+            ...state,
+            list: action.payload,
+        };
+    }
+    return state;
 }

@@ -7,4 +7,6 @@ const mapStateToProps = ({ vendor: { list } }: RootState) => ({
     vendors: list,
 });
 
+export type VendorNavProps = ReturnType<typeof mapStateToProps>;
+
 export default connect(mapStateToProps)(VendorNav);

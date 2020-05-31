@@ -1,12 +1,10 @@
+import { typedAction } from '../types';
 import { VendorType } from './types';
 
-export const fetchVendorList = () => ({
-    type: VendorType.FETCH_LIST,
-});
+export const vendorListRequest = () => typedAction<VendorType>(VendorType.LIST_REQUEST);
 
-export const updateVendorList = (vendors: Array<any>) => {
-    return {
-        type: VendorType.UPDATE_LIST,
-        payload: vendors,
-    };
-};
+export const vendorListSuccess = (vendors: Array<any>) =>
+    typedAction<VendorType, any[]>(VendorType.LIST_SUCCESS, vendors);
+
+export const vendorListFailed = (error: any) =>
+    typedAction<VendorType, any>(VendorType.LIST_FAILED, error);

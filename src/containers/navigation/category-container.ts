@@ -6,4 +6,7 @@ import { categoryListSelector } from '../../store/category/selectors';
 
 const mapStateToProps = (state: RootState) => ({ categories: categoryListSelector(state) });
 
+export type CategoryNavProps = ReturnType<typeof mapStateToProps>;
+// ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>
+
 export default connect(mapStateToProps)(CategoryNav);

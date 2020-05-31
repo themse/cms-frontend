@@ -1,13 +1,10 @@
-import { Action } from '../types';
+import { typedAction } from '../types';
 import { CategoryType } from './types';
 
-export const fetchCategoryList = () => ({
-    type: CategoryType.FETCH_LIST,
-});
+export const categoryListRequest = () => typedAction<CategoryType>(CategoryType.LIST_REQUEST);
 
-export const updateCategoryList = (categories: Array<any>) => {
-    return {
-        type: CategoryType.UPDATE_LIST,
-        payload: categories,
-    };
-};
+export const categoryListSuccess = (categories: Array<any>) =>
+    typedAction<CategoryType, any[]>(CategoryType.LIST_SUCCESS, categories);
+
+export const categoryListFailed = (error: any) =>
+    typedAction<CategoryType, any>(CategoryType.LIST_FAILED, error);

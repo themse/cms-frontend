@@ -6,8 +6,20 @@
             "name": "Desktops",
             "slug": "desktops",
             "subcategories": [
-                9,
-                10
+                {
+                    "uid": 9,
+                    "parentUid": 1,
+                    "name": "PC",
+                    "slug": "pc",
+                    "subcategories": []
+                },
+                {
+                    "uid": 10,
+                    "parentUid": 1,
+                    "name": "Mac",
+                    "slug": "mac",
+                    "subcategories": []
+                }
             ]
         },
         {
@@ -16,8 +28,20 @@
             "name": "Laptops & Notebooks",
             "slug": "laptops-notebooks",
             "subcategories": [
-                11,
-                12
+                {
+                    "uid": 11,
+                    "parentUid": 2,
+                    "name": "Macs",
+                    "slug": "pc",
+                    "subcategories": []
+                },
+                {
+                    "uid": 12,
+                    "parentUid": 2,
+                    "name": "Windows",
+                    "slug": "mac",
+                    "subcategories": []
+                }
             ]
         },
         {
@@ -26,12 +50,48 @@
             "name": "Components",
             "slug": "components",
             "subcategories": [
-                13,
-                14,
-                15,
-                16,
-                17,
-                18
+                {
+                    "uid": 13,
+                    "parentUid": 3,
+                    "name": "Keyboards",
+                    "slug": "keyboards",
+                    "subcategories": []
+                },
+                {
+                    "uid": 14,
+                    "parentUid": 3,
+                    "name": "Mice and Trackballs",
+                    "slug": "mice-and-trackballs",
+                    "subcategories": []
+                },
+                {
+                    "uid": 15,
+                    "parentUid": 3,
+                    "name": "Monitors",
+                    "slug": "monitors",
+                    "subcategories": []
+                },
+                {
+                    "uid": 16,
+                    "parentUid": 3,
+                    "name": "Printers",
+                    "slug": "printers",
+                    "subcategories": []
+                },
+                {
+                    "uid": 17,
+                    "parentUid": 3,
+                    "name": "Scanners",
+                    "slug": "scanners",
+                    "subcategories": []
+                },
+                {
+                    "uid": 18,
+                    "parentUid": 3,
+                    "name": "Web Cameras",
+                    "slug": "web-cameras",
+                    "subcategories": []
+                }
             ]
         },
         {
@@ -67,76 +127,6 @@
             "parentUid": 0,
             "name": "MP3 Players",
             "slug": "mp3-players",
-            "subcategories": []
-        },
-        {
-            "uid": 9,
-            "parentUid": 1,
-            "name": "PC",
-            "slug": "pc",
-            "subcategories": []
-        },
-        {
-            "uid": 10,
-            "parentUid": 1,
-            "name": "Mac",
-            "slug": "mac",
-            "subcategories": []
-        },
-        {
-            "uid": 11,
-            "parentUid": 2,
-            "name": "Macs",
-            "slug": "pc",
-            "subcategories": []
-        },
-        {
-            "uid": 12,
-            "parentUid": 2,
-            "name": "Windows",
-            "slug": "mac",
-            "subcategories": []
-        },
-        {
-            "uid": 13,
-            "parentUid": 3,
-            "name": "Keyboards",
-            "slug": "keyboards",
-            "subcategories": []
-        },
-        {
-            "uid": 14,
-            "parentUid": 3,
-            "name": "Mice and Trackballs",
-            "slug": "mice-and-trackballs",
-            "subcategories": []
-        },
-        {
-            "uid": 15,
-            "parentUid": 3,
-            "name": "Monitors",
-            "slug": "monitors",
-            "subcategories": []
-        },
-        {
-            "uid": 16,
-            "parentUid": 3,
-            "name": "Printers",
-            "slug": "printers",
-            "subcategories": []
-        },
-        {
-            "uid": 17,
-            "parentUid": 3,
-            "name": "Scanners",
-            "slug": "scanners",
-            "subcategories": []
-        },
-        {
-            "uid": 18,
-            "parentUid": 3,
-            "name": "Web Cameras",
-            "slug": "web-cameras",
             "subcategories": []
         }
     ],
